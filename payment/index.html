@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Payment Information</h2>
+        <form action="/submit_payment" method="POST">
+            <div class="payment-method">
+                <label for="payment-method">Choose a payment method:</label>
+                <select id="payment-method" name="payment_method">
+                    <option value="credit_card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank_transfer">Bank Transfer</option>
+                </select>
+            </div>
+
+            <div class="credit-card-info">
+                <h3>Credit Card Information</h3>
+                <label for="cc-name">Name on Card</label>
+                <input type="text" id="cc-name" name="cc_name" required>
+
+                <label for="cc-number">Card Number</label>
+                <input type="text" id="cc-number" name="cc_number" required>
+
+                <label for="cc-expiry">Expiry Date</label>
+                <input type="text" id="cc-expiry" name="cc_expiry" placeholder="MM/YY" required>
+
+                <label for="cc-cvv">CVV</label>
+                <input type="text" id="cc-cvv" name="cc_cvv" required>
+            </div>
+
+            <div class="paypal-info">
+                <h3>PayPal Information</h3>
+                <label for="paypal-email">PayPal Email</label>
+                <input type="email" id="paypal-email" name="paypal_email" required>
+            </div>
+
+            <div class="bank-transfer-info">
+                <h3>Bank Transfer Information</h3>
+                <label for="bank-name">Bank Name</label>
+                <input type="text" id="bank-name" name="bank_name" required>
+
+                <label for="account-number">Account Number</label>
+                <input type="text" id="account-number" name="account_number" required>
+
+                <label for="routing-number">Routing Number</label>
+                <input type="text" id="routing-number" name="routing_number" required>
+            </div>
+
+            <a href="http://127.0.0.1:5502/confirm/index.html" type="btn">Confirm </a>
+        </form>
+    </div>
+
+</body>
+</html>
